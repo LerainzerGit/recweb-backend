@@ -1,0 +1,71 @@
+{
+  "Auth": {
+    "login": {
+      "token": "RECWEBTKN_abc123",
+      "accountId": 1,
+      "expires": 9999999999,
+      "issued": 9999999000,
+      "device": "web",
+      "clientVersion": "2019.06.11"
+    },
+    "refresh": {
+      "token": "RECWEBTKN_def456",
+      "expires": 9999999999
+    },
+    "validate": {
+      "valid": true
+    },
+    "logout": {
+      "success": true
+    },
+    "register": {
+      "accountId": 1,
+      "success": true
+    }
+  },
+
+  "Accounts": {
+    "accountId": 1,
+    "username": "Player1",
+    "displayName": "Player One",
+    "creationDate": "2019-06-11"
+  },
+
+  "PlayerSettings": {
+    "comfortMode": true,
+    "screenMode": true,
+    "micEnabled": true
+  },
+
+  "Rooms": {
+    "defaultRoom": "RecCenter",
+    "rooms": [
+      { "name": "RecCenter", "id": 100 },
+      { "name": "DormRoom", "id": 101 }
+    ]
+  },
+
+  "Matchmaking": {
+    "joinRoom": {
+      "roomId": 100,
+      "instance": "Instance_001"
+    }
+  },
+
+  "Storage": {
+    "inventory": ["MakerPen", "Camera", "GlowStick"]
+  },
+
+  "Chat": {
+    "messages": [
+      { "from": "Player1", "text": "Hello!" }
+    ]
+  },
+
+  "Images": {
+    "profile": "https://lerainzergit.github.io/recweb-backend/assets/profile.png",
+    "roomThumbs": {
+      "RecCenter": "https://lerainzergit.github.io/recweb-backend/assets/rec_center.png"
+    }
+  }
+}
