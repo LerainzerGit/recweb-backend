@@ -1,0 +1,13 @@
+{
+  "backendBase": "https://lerainzergit.github.io/recweb-backend/index.json",
+  "services": {
+    "Auth": "Auth",
+    "Accounts": "Accounts",
+    "PlayerSettings": "PlayerSettings",
+    "Rooms": "Rooms",
+    "Matchmaking": "Matchmaking",
+    "Storage": "Storage",
+    "Chat": "Chat",
+    "Images": "Images"
+  }
+}
