@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RecWeb Client Stub</title>
+  <style>
+    body { background: #000; color: #0f0; font-family: monospace; padding: 20px; }
+    h1 { color: #0ff; }
+    pre { background: #020; padding: 20px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>RecWeb Client Stub</h1>
+  <pre id="output"></pre>
+
+  <script>
+    Promise.all([
+      fetch("routes.json").then(r => r.json()),
+      fetch("index.json").then(r => r.json())
+    ]).then(([routes, backend]) => {
+      const auth = backend[ routes.services.Auth ];
+      const rooms = backend[ routes.services.Rooms ];
+
+      const summary = {
+        token: auth.login.token,
+        defaultRoom: rooms.defaultRoom,
+        rooms: rooms.rooms
+      };
+
+      document.getElementById("output").textContent =
+        JSON.stringify(summary, null, 2);
+    });
+  </script>
+</body>
+</html>
