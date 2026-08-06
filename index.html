@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RecWeb Backend</title>
+  <style>
+    body { background: #111; color: #eee; font-family: monospace; padding: 20px; }
+    pre { background: #222; padding: 20px; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>RecWeb Unified Backend</h1>
+  <pre id="json"></pre>
+
+  <script>
+    fetch("index.json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("json").textContent =
+          JSON.stringify(data, null, 2);
+      });
+  </script>
+</body>
+</html>
